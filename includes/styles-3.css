@@ -1,0 +1,179 @@
+
+html, body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#walking-person {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.rooms {
+    position: relative;
+    width: 100vw;
+}
+
+#room-1 {
+    height: 100vh;
+    background-image: url("../images/wood.jpg");
+    background-size: 2% auto;
+    background-repeat: repeat;
+}
+
+.wall {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background-color: #775c46;
+}
+
+.front-door {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200%;
+    width: 350px;
+    background-color: #000;
+}
+
+#room-2 {
+    height: 200vh;
+    background-image: url("../images/images (1).jpeg");
+    background-size: 20% auto;
+    background-repeat: repeat;
+}
+
+#figure-2 {
+    position: absolute;
+    width: 200px;
+    left: 30%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#figure-2:hover {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+#figure-3 {
+    position: absolute;
+    width: 200px;
+    left: 70%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#figure-3:hover {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+#figure-4 {
+    position: absolute;
+    width: 200px;
+    left: 60%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#figure-4:hover {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+#room-3 {
+    height: 100vh;
+    background-image: url("../images/water.jpg");
+    background-size: 2% auto;
+    background-repeat: repeat;
+}
+
+#figure-5 {
+    position: absolute;
+    width: 200px;
+    left: 60%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#figure-5:hover {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+#figure-6 {
+    position: absolute;
+    width: 200px;
+    left: 30%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#figure-6:hover {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+#figure-2,
+#figure-3,
+#figure-4,
+#figure-5,
+#figure-6 {
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.speech-bubble {
+    position: fixed;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 18px;
+    padding: 12px 18px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: max-content;
+    max-width: min(220px, 70vw);
+    box-sizing: border-box;
+    box-shadow: 5px 5px 0 black;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -100%) scale(0.8);
+    transform-origin: bottom center;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.speech-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -100%) scale(1);
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 12px solid transparent;
+    border-top-color: black;
+}
