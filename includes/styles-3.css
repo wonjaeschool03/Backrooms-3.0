@@ -46,7 +46,7 @@ html, body {
 
 #room-2 {
     height: 200vh;
-    background-image: url("../images/images (1).jpeg");
+    background-image: url("../images/images\ \(1\).jpeg");
     background-size: 20% auto;
     background-repeat: repeat;
 }
